@@ -1,0 +1,8 @@
+numpy
+pandas
+seaborn
+flask
+sklearn
+jupyter
+scikit-learn
+tensorFlow
