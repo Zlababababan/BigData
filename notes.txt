@@ -1,0 +1,36 @@
+Etapes pour mettre en place Docker :
+(Tuto suivi : https://docs.docker.com/engine/install/ubuntu/)
+
+- Desinstaller les anciennes versions (si présentes)
+sudo apt-get remove docker docker-engine docker.io containerd runc
+
+- Set up the repository
+-- Update
+$ sudo apt-get update
+
+$ sudo apt-get install \
+    apt-transport-https \
+    ca-certificates \
+    curl \
+    gnupg-agent \
+    software-properties-common
+
+-- Add docker's official GPG key
+$ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+
+Check the fingerprint : udo apt-key fingerprint 0EBFCD88
+
+-- Set up the stable repository
+$ sudo add-apt-repository \
+   "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
+   $(lsb_release -cs) \
+   stable"
+
+
+- Installer Docker Engine
+-- sudo apt-get install docker-ce docker-ce-cli containerd.io
+
+
+- Check that docker is correctly installed
+-- sudo docker run hello-world
+
