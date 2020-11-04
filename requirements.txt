@@ -1,8 +1,10 @@
-numpy
+numpy==1.16.0
+ipykernel
 pandas
 seaborn
 flask
 sklearn
 jupyter
 scikit-learn
+ipykernel
 tensorFlow
